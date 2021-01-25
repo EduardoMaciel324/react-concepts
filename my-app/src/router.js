@@ -7,6 +7,15 @@ import {
   Link
 } from "react-router-dom";
 import Intro from "./introducing-jsx"
+import Rendering from "./rendering-elements";
+import {Welcome, Question, App, UserInfo} from "./components-and-props";
+const comment = {
+  author : {
+    name: "Eduardo Maciel",
+    avatar : "Dragon"
+  },
+  text : "Hello my name is Eduardo and i am beginner in React"
+}
 export default function BasicExample() {
   return (
     <Router>
@@ -40,17 +49,22 @@ export default function BasicExample() {
             <Link to="/9">State Up</Link>
           </li>
         </ul>
-
         <hr />
         <Switch>
           <Route exact path="/1">
             <Intro />
           </Route>
           <Route path="/2">
-            <About />
+            <Rendering />
           </Route>
           <Route path="/3">
-            <About />
+            <Welcome name="Eduardo Maciel" />
+            <Question name="Eduardo Maciel" />
+            <App></App>
+            <UserInfo
+              author = {comment.author}
+              text = {comment.text}>
+            </UserInfo>
           </Route>
         </Switch>
       </div>
@@ -60,27 +74,3 @@ export default function BasicExample() {
 
 // You can think of these components as "pages"
 // in your app.
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
-    </div>
-  );
-}
