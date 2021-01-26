@@ -9,6 +9,8 @@ import {
 import Intro from "./introducing-jsx"
 import Rendering from "./rendering-elements";
 import {Welcome, Question, App, UserInfo} from "./components-and-props";
+import Lifecycle from "./state-and-lifecycle";
+import {CountByClick, Toggle} from "./handling-events";
 const comment = {
   author : {
     name: "Eduardo Maciel",
@@ -65,6 +67,15 @@ export default function BasicExample() {
               author = {comment.author}
               text = {comment.text}>
             </UserInfo>
+          </Route>
+          <Route path='/4'>
+            <Lifecycle></Lifecycle>
+          </Route>
+          <Route path='/5'>
+            <CountByClick></CountByClick>
+            <Toggle></Toggle>
+          </Route>
+          <Route path='/6'>
           </Route>
         </Switch>
       </div>
