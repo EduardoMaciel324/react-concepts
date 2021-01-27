@@ -1,23 +1,18 @@
 import React from "react";
 import "./index.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Intro from "./introducing-jsx"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Intro from "./introducing-jsx";
 import Rendering from "./rendering-elements";
-import {Welcome, Question, App, UserInfo} from "./components-and-props";
+import { Welcome, Question, App, UserInfo } from "./components-and-props";
 import Lifecycle from "./state-and-lifecycle";
-import {CountByClick, Toggle} from "./handling-events";
+import { CountByClick, Toggle } from "./handling-events";
 const comment = {
-  author : {
+  author: {
     name: "Eduardo Maciel",
-    avatar : "Dragon"
+    avatar: "Dragon",
   },
-  text : "Hello my name is Eduardo and i am beginner in React"
-}
+  text: "Hello my name is Eduardo and i am beginner in React",
+};
 export default function BasicExample() {
   return (
     <Router>
@@ -63,20 +58,16 @@ export default function BasicExample() {
             <Welcome name="Eduardo Maciel" />
             <Question name="Eduardo Maciel" />
             <App></App>
-            <UserInfo
-              author = {comment.author}
-              text = {comment.text}>
-            </UserInfo>
+            <UserInfo author={comment.author} text={comment.text}></UserInfo>
           </Route>
-          <Route path='/4'>
+          <Route path="/4">
             <Lifecycle></Lifecycle>
           </Route>
-          <Route path='/5'>
+          <Route path="/5">
             <CountByClick></CountByClick>
             <Toggle></Toggle>
           </Route>
-          <Route path='/6'>
-          </Route>
+          <Route path="/6"></Route>
         </Switch>
       </div>
     </Router>

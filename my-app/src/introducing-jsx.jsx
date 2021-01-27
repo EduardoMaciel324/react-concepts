@@ -1,9 +1,9 @@
 const user = {
-  firstName : "Eduardo",
-  lastName  : "Matos"
-}
+  firstName: "Eduardo",
+  lastName: "Matos",
+};
 function buildName(user) {
-  return `${user.firstName} ${user.lastName}`
+  return `${user.firstName} ${user.lastName}`;
 }
 function App() {
   return (
